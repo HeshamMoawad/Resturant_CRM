@@ -1,14 +1,20 @@
-from django.contrib import admin
+from django.contrib import admin 
 from .models import (
     Account ,
     Address,
     Area ,
     City ,
+
+
+    models ,
 )
 
+class CityAdmin(admin.ModelAdmin):
+    list_display = ["name","created_at"]
 
-# Register your models here.
-admin.site.register(City)
+admin.site.register(City , CityAdmin)
+
+
 admin.site.register(Area)
 admin.site.register(Address)
 admin.site.register(Account)
