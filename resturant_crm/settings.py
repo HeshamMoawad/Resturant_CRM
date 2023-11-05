@@ -32,7 +32,8 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS")
 # Application definition
 
 LOCAL_APPS = [
-    'accounts'
+    'accounts' ,
+    'users',
 ]
 
 INSTALLED_APPS = [
