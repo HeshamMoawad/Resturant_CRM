@@ -1,9 +1,9 @@
 from django.db import models
-
+from users.models import Agent
 
 # Create your models here.
 class City(models.Model):
-    # creator = 
+    creator = models.ForeignKey(Agent,on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     created_at = models.DateField(verbose_name="Created At",auto_now=True)
 

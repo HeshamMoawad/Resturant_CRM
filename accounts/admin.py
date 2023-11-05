@@ -10,7 +10,7 @@ from .models import (
 )
 
 class CityAdmin(admin.ModelAdmin):
-    list_display = ["name","created_at"]
+    list_display = ["name","creator","created_at"]
 
 admin.site.register(City , CityAdmin)
 
